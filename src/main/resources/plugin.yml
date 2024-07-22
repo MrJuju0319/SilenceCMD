@@ -1,0 +1,8 @@
+name: SilenceCMD
+version: 1.0
+main: fr.MrJuJu0319.Main
+commands:
+  sgive:
+    description: "Gives an item to a player secretly"
+  seco:
+    description: "donne de l'argent en secret"
