@@ -1,6 +1,6 @@
 # SilenceCMD
 
-SilenceCMD est un plugin Minecraft permettant aux administrateurs de donner des objets et de l'argent aux joueurs via des commandes exécutées depuis la console. Il utilise l'API EssentialsX et PaperMC.
+SilenceCMD est un plugin Minecraft permettant aux administrateurs de donner des objets et de l'argent aux joueurs via des commandes exécutées depuis la console sans log pour evité le spam sur certain plugins ou items custom . Il utilise l'API EssentialsX et PaperMC.
 
 ## Fonctionnalités
 
