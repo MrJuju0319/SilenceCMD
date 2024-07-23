@@ -7,54 +7,53 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.ConsoleCommandSender;
+import fr.MrJuJu0319.Main;
 
 import java.math.BigDecimal;
 
 public class SecoCommand implements CommandExecutor {
 
     private final Essentials essentials;
+    private final Main plugin;
 
-    public SecoCommand(Essentials essentials) {
+    public SecoCommand(Essentials essentials, Main plugin) {
         this.essentials = essentials;
+        this.plugin = plugin;
     }
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (!(sender instanceof ConsoleCommandSender)) {
-            sender.sendMessage("Cette commande ne peut être exécutée que depuis la console.");
+            sender.sendMessage(plugin.getMessage("console_only"));
             return true;
         }
 
         if (args.length < 2) {
-            sender.sendMessage("Usage: /seco <player> <amount>");
+            sender.sendMessage(plugin.getMessage("command_usage_seco"));
             return true;
         }
 
         User user = essentials.getUser(args[0]);
         if (user == null) {
-            sender.sendMessage("Le joueur spécifié n'existe pas.");
+            sender.sendMessage(plugin.getMessage("player_not_exist"));
             return true;
         }
 
         try {
-            // Convertir la quantité en BigDecimal
             BigDecimal amount = new BigDecimal(args[1]);
             if (amount.compareTo(BigDecimal.ZERO) <= 0) {
-                sender.sendMessage("La quantité doit être un nombre positif.");
+                sender.sendMessage(plugin.getMessage("amount_positive"));
                 return true;
             }
 
-            // Obtenez l'argent actuel du joueur
             BigDecimal currentBalance = user.getMoney();
-
-            // Ajoutez l'argent au joueur sans déclencher le message de confirmation
             user.setMoney(currentBalance.add(amount));
         } catch (NumberFormatException e) {
-            sender.sendMessage("La quantité spécifiée est invalide. Assurez-vous que la quantité est un nombre.");
+            sender.sendMessage(plugin.getMessage("amount_invalid"));
         } catch (MaxMoneyException e) {
-            sender.sendMessage("Le joueur a atteint la limite maximale d'argent. L'argent n'a pas été ajouté.");
+            sender.sendMessage(plugin.getMessage("max_money_reached"));
         } catch (Exception e) {
-            sender.sendMessage("Une erreur inconnue est survenue : " + e.getMessage());
+            sender.sendMessage(plugin.getMessage("unknown_error").replace("{error}", e.getMessage()));
         }
 
         return true;
