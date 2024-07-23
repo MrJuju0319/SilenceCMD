@@ -16,18 +16,20 @@ public class Main extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        getLogger().info("[SilenceCMD]: V1.0 est OK");
-
-        // Enregistrer la commande /sgive
-        this.getCommand("sgive").setExecutor(new SgiveCommand());
-
+        getLogger().info("[SilenceCMD]: Lancement en cours . . .");
+        getLogger().info("[SilenceCMD] ");
         // Initialiser Essentials
         if (getServer().getPluginManager().getPlugin("Essentials") instanceof Essentials) {
             essentials = (Essentials) getServer().getPluginManager().getPlugin("Essentials");
-            getLogger().info("EssentialsX a été trouvé et initialisé.");
+            getLogger().info("[SilenceCMD]: EssentialsX a été trouvé et initialisé.");
         } else {
-            getLogger().warning("EssentialsX n'est pas trouvé ou n'est pas bien installé.");
+            getLogger().warning("[SilenceCMD]: &4EssentialsX n'est pas trouvé ou n'est pas bien installé.");
         }
+        getLogger().info("[SilenceCMD] ");
+        getLogger().info("[SilenceCMD]: Lancement terminer");
+
+        // Enregistrer la commande /sgive
+        this.getCommand("sgive").setExecutor(new SgiveCommand());
 
         // Enregistrer la commande /seco
         if (essentials != null) {

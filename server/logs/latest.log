@@ -1,66 +1,64 @@
-[22:21:50] [ServerMain/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[22:21:52] [ServerMain/INFO]: Loaded 7 recipes
-[22:21:52] [Server thread/INFO]: Starting minecraft server version 1.20.1
-[22:21:52] [Server thread/INFO]: Loading properties
-[22:21:52] [Server thread/INFO]: This server is running Paper version git-Paper-196 (MC: 1.20.1) (Implementing API version 1.20.1-R0.1-SNAPSHOT) (Git: 773dd72)
-[22:21:53] [Server thread/INFO]: Server Ping Player Sample Count: 12
-[22:21:53] [Server thread/INFO]: Using 4 threads for Netty based IO
-[22:21:53] [Server thread/INFO]: [ChunkTaskScheduler] Chunk system is using 1 I/O threads, 3 worker threads, and gen parallelism of 3 threads
-[22:21:54] [Server thread/INFO]: Default game type: SURVIVAL
-[22:21:54] [Server thread/INFO]: Generating keypair
-[22:21:54] [Server thread/INFO]: Starting Minecraft server on *:25565
-[22:21:54] [Server thread/INFO]: Using default channel type
-[22:21:54] [Server thread/INFO]: Paper: Using Java compression from Velocity.
-[22:21:54] [Server thread/INFO]: Paper: Using Java cipher from Velocity.
-[22:21:54] [Server thread/WARN]: [org.bukkit.craftbukkit.v1_20_R1.legacy.CraftLegacy] Initializing Legacy Material Support. Unless you have legacy plugins and/or data this is a bug!
-[22:21:57] [Server thread/WARN]: Legacy plugin SilenceCMD v1.0 does not specify an api-version.
-[22:21:57] [Server thread/INFO]: [Essentials] Loading server plugin Essentials v2.21.0-dev+105-80c3150
-[22:21:57] [Server thread/INFO]: [SilenceCMD] Loading server plugin SilenceCMD v1.0
-[22:21:57] [Server thread/INFO]: [EssentialsSpawn] Loading server plugin EssentialsSpawn v2.21.0-dev+105-80c3150
-[22:21:57] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
-[22:21:57] [Server thread/INFO]: Preparing level "world"
-[22:21:57] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
-[22:21:57] [Server thread/INFO]: Time elapsed: 360 ms
-[22:21:57] [Server thread/INFO]: [Essentials] Enabling Essentials v2.21.0-dev+105-80c3150
-[22:21:58] [Server thread/ERROR]: [Essentials] Vous utilisez une version de serveur non prise en charge !
-[22:21:58] [Server thread/INFO]: [Essentials] Attempting to convert old kits in config.yml to new kits.yml
-[22:21:58] [Server thread/INFO]: [Essentials] No kits found to migrate.
-[22:21:59] [Server thread/INFO]: [Essentials] Loaded 42679 items from items.json.
-[22:21:59] [Server thread/INFO]: [Essentials] Using locale fr_FR
-[22:21:59] [Server thread/INFO]: [Essentials] ServerListPingEvent: Spigot iterator API
-[22:21:59] [Server thread/INFO]: [Essentials] Starting Metrics. Opt-out using the global bStats config.
-[22:21:59] [Server thread/INFO]: [Essentials] Using superperms-based permissions.
-[22:21:59] [Server thread/INFO]: [SilenceCMD] Enabling SilenceCMD v1.0*
-[22:21:59] [Server thread/INFO]: [SilenceCMD] [SilenceCMD]: V1.0 est OK
-[22:21:59] [Server thread/INFO]: [SilenceCMD] EssentialsX a été trouvé et initialisé.
-[22:21:59] [Server thread/INFO]: [EssentialsSpawn] Enabling EssentialsSpawn v2.21.0-dev+105-80c3150
-[22:21:59] [Server thread/INFO]: [EssentialsSpawn] Starting Metrics. Opt-out using the global bStats config.
-[22:21:59] [Server thread/INFO]: Running delayed init tasks
-[22:21:59] [Server thread/INFO]: Done (7.238s)! For help, type "help"
-[22:21:59] [Server thread/INFO]: Timings Reset
-[22:21:59] [Craft Scheduler Thread - 0 - Essentials/INFO]: [Essentials] Récupération des informations de version...
-[22:22:23] [User Authenticator #0/INFO]: UUID of player MrJuju0319 is 6b35ba27-c8cc-4874-8864-e18867ca08c3
-[22:22:23] [Server thread/INFO]: MrJuju0319 joined the game
-[22:22:23] [Server thread/INFO]: MrJuju0319[/127.0.0.1:61758] logged in with entity id 203 at ([world]0.0, 87.0, 0.0)
-[22:22:30] [Server thread/INFO]: MrJuju0319 issued server command: /seco MrJuju0319 1
-[22:22:59] [Server thread/INFO]: Le joueur spécifié n'existe pas.
-[22:23:10] [Server thread/INFO]: L'argent a été donné à MrJuJu0319
-[22:44:39] [Server thread/INFO]: Stopping server
-[22:44:39] [Server thread/INFO]: [EssentialsSpawn] Disabling EssentialsSpawn v2.21.0-dev+105-80c3150
-[22:44:39] [Server thread/INFO]: [SilenceCMD] Disabling SilenceCMD v1.0
-[22:44:39] [Server thread/INFO]: [SilenceCMD] [SilenceCMD]: Disabled
-[22:44:39] [Server thread/INFO]: [Essentials] Disabling Essentials v2.21.0-dev+105-80c3150
-[22:44:39] [Server thread/INFO]: Saving players
-[22:44:39] [Server thread/INFO]: MrJuju0319 lost connection: Server closed
-[22:44:39] [Server thread/INFO]: MrJuju0319 left the game
-[22:44:39] [Server thread/INFO]: Saving worlds
-[22:44:39] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
-[22:44:39] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world'
-[22:44:39] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world'
-[22:44:39] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world'
-[22:44:40] [Server thread/INFO]: [ChunkHolderManager] Saved 15 block chunks, 181 entity chunks, 0 poi chunks in world 'world' in 0,21s
-[22:44:40] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
-[22:44:40] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
-[22:44:40] [Server thread/INFO]: Flushing Chunk IO
-[22:44:40] [Server thread/INFO]: Closing Thread Pool
-[22:44:40] [Server thread/INFO]: Closing Server
+[09:57:05] [ServerMain/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[09:57:07] [ServerMain/INFO]: Loaded 7 recipes
+[09:57:07] [Server thread/INFO]: Starting minecraft server version 1.20.1
+[09:57:07] [Server thread/INFO]: Loading properties
+[09:57:07] [Server thread/INFO]: This server is running Paper version git-Paper-196 (MC: 1.20.1) (Implementing API version 1.20.1-R0.1-SNAPSHOT) (Git: 773dd72)
+[09:57:08] [Server thread/INFO]: Using 4 threads for Netty based IO
+[09:57:08] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[09:57:08] [Server thread/INFO]: [ChunkTaskScheduler] Chunk system is using 1 I/O threads, 3 worker threads, and gen parallelism of 3 threads
+[09:57:08] [Server thread/INFO]: Default game type: SURVIVAL
+[09:57:08] [Server thread/INFO]: Generating keypair
+[09:57:08] [Server thread/INFO]: Starting Minecraft server on *:25565
+[09:57:08] [Server thread/INFO]: Using default channel type
+[09:57:08] [Server thread/INFO]: Paper: Using Java compression from Velocity.
+[09:57:08] [Server thread/INFO]: Paper: Using Java cipher from Velocity.
+[09:57:09] [Server thread/WARN]: [org.bukkit.craftbukkit.v1_20_R1.legacy.CraftLegacy] Initializing Legacy Material Support. Unless you have legacy plugins and/or data this is a bug!
+[09:57:11] [Server thread/WARN]: Legacy plugin SilenceCMD v1.0 does not specify an api-version.
+[09:57:11] [Server thread/INFO]: [Essentials] Loading server plugin Essentials v2.21.0-dev+105-80c3150
+[09:57:11] [Server thread/INFO]: [SilenceCMD] Loading server plugin SilenceCMD v1.0
+[09:57:11] [Server thread/INFO]: [EssentialsSpawn] Loading server plugin EssentialsSpawn v2.21.0-dev+105-80c3150
+[09:57:11] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[09:57:11] [Server thread/INFO]: Preparing level "world"
+[09:57:11] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[09:57:11] [Server thread/INFO]: Time elapsed: 270 ms
+[09:57:12] [Server thread/INFO]: [Essentials] Enabling Essentials v2.21.0-dev+105-80c3150
+[09:57:12] [Server thread/ERROR]: [Essentials] Vous utilisez une version de serveur non prise en charge !
+[09:57:12] [Server thread/INFO]: [Essentials] Attempting to convert old kits in config.yml to new kits.yml
+[09:57:12] [Server thread/INFO]: [Essentials] No kits found to migrate.
+[09:57:12] [Server thread/INFO]: [Essentials] Loaded 42679 items from items.json.
+[09:57:12] [Server thread/INFO]: [Essentials] Using locale fr_FR
+[09:57:12] [Server thread/INFO]: [Essentials] ServerListPingEvent: Spigot iterator API
+[09:57:13] [Server thread/INFO]: [Essentials] Starting Metrics. Opt-out using the global bStats config.
+[09:57:13] [Server thread/INFO]: [Essentials] Using superperms-based permissions.
+[09:57:13] [Server thread/INFO]: [SilenceCMD] Enabling SilenceCMD v1.0*
+[09:57:13] [Server thread/INFO]: [SilenceCMD] [SilenceCMD]: V1.0 est OK
+[09:57:13] [Server thread/INFO]: [SilenceCMD] [SilenceCMD] 
+[09:57:13] [Server thread/INFO]: [SilenceCMD] [SilenceCMD]: Lancement en cours . . .
+[09:57:13] [Server thread/INFO]: [SilenceCMD] [SilenceCMD] 
+[09:57:13] [Server thread/INFO]: [SilenceCMD] [SilenceCMD]: EssentialsX a été trouvé et initialisé.
+[09:57:13] [Server thread/INFO]: [SilenceCMD] [SilenceCMD] 
+[09:57:13] [Server thread/INFO]: [SilenceCMD] [SilenceCMD]: Lancement terminer
+[09:57:13] [Server thread/INFO]: [SilenceCMD] EssentialsX a été trouvé et initialisé.
+[09:57:13] [Server thread/INFO]: [EssentialsSpawn] Enabling EssentialsSpawn v2.21.0-dev+105-80c3150
+[09:57:13] [Server thread/INFO]: [EssentialsSpawn] Starting Metrics. Opt-out using the global bStats config.
+[09:57:13] [Server thread/INFO]: Running delayed init tasks
+[09:57:13] [Server thread/INFO]: Done (5.965s)! For help, type "help"
+[09:57:13] [Server thread/INFO]: Timings Reset
+[09:57:13] [Craft Scheduler Thread - 2 - Essentials/INFO]: [Essentials] Récupération des informations de version...
+[10:03:17] [Server thread/INFO]: Stopping server
+[10:03:17] [Server thread/INFO]: [EssentialsSpawn] Disabling EssentialsSpawn v2.21.0-dev+105-80c3150
+[10:03:17] [Server thread/INFO]: [SilenceCMD] Disabling SilenceCMD v1.0
+[10:03:17] [Server thread/INFO]: [SilenceCMD] [SilenceCMD]: Disabled
+[10:03:17] [Server thread/INFO]: [Essentials] Disabling Essentials v2.21.0-dev+105-80c3150
+[10:03:17] [Server thread/INFO]: Saving players
+[10:03:17] [Server thread/INFO]: Saving worlds
+[10:03:17] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
+[10:03:17] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world'
+[10:03:17] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world'
+[10:03:17] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world'
+[10:03:17] [Server thread/INFO]: [ChunkHolderManager] Saved 1 block chunks, 135 entity chunks, 0 poi chunks in world 'world' in 0,05s
+[10:03:17] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[10:03:17] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
+[10:03:17] [Server thread/INFO]: Flushing Chunk IO
+[10:03:17] [Server thread/INFO]: Closing Thread Pool
+[10:03:17] [Server thread/INFO]: Closing Server

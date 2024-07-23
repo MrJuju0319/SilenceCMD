@@ -44,9 +44,11 @@ public class SecoCommand implements CommandExecutor {
                 return true;
             }
 
-            // Appeler la méthode avec BigDecimal
-            user.giveMoney(amount); // Assurez-vous que cette méthode accepte BigDecimal
-            sender.sendMessage("L'argent a été donné à " + args[0]);
+            // Obtenez l'argent actuel du joueur
+            BigDecimal currentBalance = user.getMoney();
+
+            // Ajoutez l'argent au joueur sans déclencher le message de confirmation
+            user.setMoney(currentBalance.add(amount));
         } catch (NumberFormatException e) {
             sender.sendMessage("La quantité spécifiée est invalide. Assurez-vous que la quantité est un nombre.");
         } catch (MaxMoneyException e) {

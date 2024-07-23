@@ -16,9 +16,9 @@ timestamps:
   mute: 0
   jail: 0
   onlinejail: 0
-  logout: 1721681079224
-  login: 1721679743884
-money: '1'
+  logout: 1721721312909
+  login: 1721720995165
+money: '1014'
 last-account-name: MrJuju0319
 lastlocation:
   world: 9cecbf9b-9255-4220-a938-a31b8bf30548
@@ -31,8 +31,8 @@ lastlocation:
 logoutlocation:
   world: 9cecbf9b-9255-4220-a938-a31b8bf30548
   world-name: world
-  x: 0.5336615173088591
-  y: 88.0
-  z: 4.767469132017551
-  yaw: 167.69998168945312
-  pitch: 33.14997100830078
+  x: 2.0188378754009237
+  y: 90.20000004768372
+  z: 5.699999988079071
+  yaw: -175.0503387451172
+  pitch: 73.49994659423828
