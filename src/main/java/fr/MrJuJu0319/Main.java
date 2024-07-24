@@ -8,7 +8,6 @@ import fr.MrJuJu0319.commande.SecoCommand;
 import com.earth2me.essentials.Essentials;
 
 import java.io.File;
-import java.io.IOException;
 
 public class Main extends JavaPlugin {
 
@@ -18,7 +17,9 @@ public class Main extends JavaPlugin {
     @Override
     public void onEnable() {
         getLogger().info("[SilenceCMD]: Lancement en cours . . .");
-        getLogger().info("");
+
+        // Charger le fichier de messages
+        loadMessages();
 
         // Initialiser Essentials
         if (getServer().getPluginManager().getPlugin("Essentials") instanceof Essentials) {
@@ -27,8 +28,7 @@ public class Main extends JavaPlugin {
         } else {
             getLogger().warning("[SilenceCMD]: EssentialsX n'est pas trouvé ou n'est pas bien installé.");
         }
-        getLogger().info("");
-        getLogger().info("[SilenceCMD]: Lancement terminer");
+        getLogger().info("[SilenceCMD]: Lancement terminé");
 
         // Enregistrer la commande /sgive
         this.getCommand("sgive").setExecutor(new SgiveCommand(this));
@@ -54,6 +54,6 @@ public class Main extends JavaPlugin {
     }
 
     public String getMessage(String key) {
-        return messagesConfig.getString("messages." + key);
+        return messagesConfig.getString("messages." + key, "Message non trouvé: " + key);
     }
 }

@@ -1,5 +1,6 @@
 package fr.MrJuJu0319.commande;
 
+import fr.MrJuJu0319.Main;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
@@ -8,7 +9,6 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
-import fr.MrJuJu0319.Main;
 
 public class SgiveCommand implements CommandExecutor {
 
@@ -22,7 +22,7 @@ public class SgiveCommand implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (sender instanceof ConsoleCommandSender) {
             if (args.length < 3) {
-                sender.sendMessage(plugin.getMessage("command_usage_sgive"));
+                sender.sendMessage(plugin.getMessage("usage_sgive"));
                 return true;
             }
 
@@ -34,16 +34,19 @@ public class SgiveCommand implements CommandExecutor {
 
             ItemStack item;
             try {
-                Material material = Material.valueOf(args[1].toUpperCase());
+                Material material = Material.matchMaterial(args[1].toUpperCase());
+                if (material == null) {
+                    sender.sendMessage(plugin.getMessage("invalid_item"));
+                    return true;
+                }
                 int amount = Integer.parseInt(args[2]);
                 item = new ItemStack(material, amount);
             } catch (IllegalArgumentException e) {
-                sender.sendMessage(plugin.getMessage("item_invalid"));
+                sender.sendMessage(plugin.getMessage("invalid_item"));
                 return true;
             }
 
             target.getInventory().addItem(item);
-
         } else {
             sender.sendMessage(plugin.getMessage("console_only"));
         }
