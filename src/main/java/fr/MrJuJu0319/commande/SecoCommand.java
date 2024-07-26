@@ -2,6 +2,7 @@ package fr.MrJuJu0319.commande;
 
 import com.earth2me.essentials.Essentials;
 import com.earth2me.essentials.User;
+import me.clip.placeholderapi.PlaceholderAPI;
 import fr.MrJuJu0319.Main;
 import net.ess3.api.MaxMoneyException;
 import org.bukkit.command.Command;
@@ -33,7 +34,10 @@ public class SecoCommand implements CommandExecutor {
             return true;
         }
 
-        User user = essentials.getUser(args[0]);
+        // Utiliser PlaceholderAPI pour résoudre le nom du joueur si nécessaire
+        String playerName = PlaceholderAPI.setPlaceholders(null, args[0]);
+        User user = essentials.getUser(playerName);
+
         if (user == null) {
             sender.sendMessage(plugin.getMessage("player_not_found"));
             return true;
@@ -48,6 +52,13 @@ public class SecoCommand implements CommandExecutor {
 
             BigDecimal currentBalance = user.getMoney();
             user.setMoney(currentBalance.add(amount));
+            if (plugin.isDebugMode()) {
+                String logMessage = plugin.getMessage("received_money_log")
+                        .replace("%player%", playerName)
+                        .replace("%amount%", amount.toString());
+                plugin.getLogger().info(logMessage);
+
+            }
         } catch (NumberFormatException e) {
             sender.sendMessage(plugin.getMessage("invalid_amount"));
         } catch (MaxMoneyException e) {

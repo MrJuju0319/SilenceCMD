@@ -1,9 +1,13 @@
 name: SilenceCMD
-version: 1.1
+version: 1.3
 main: fr.MrJuJu0319.Main
 api-version: "1.20"
+softdepend: [PlaceholderAPI]
 commands:
   sgive:
     description: "Gives an item to a player secretly"
   seco:
     description: "donne de l'argent en secret"
+  sreloadconfig:
+    description: "Reloads the plugin configuration"
+    usage: "/sreloadconfig"

@@ -10,3 +10,6 @@ messages:
   invalid_amount: "La quantité spécifiée est invalide. Assurez-vous que la quantité est un nombre."
   max_money_reached: "Le joueur a atteint la limite maximale d'argent. L'argent n'a pas été ajouté."
   unknown_error: "Une erreur inconnue est survenue: "
+  received_money_log: "Seco : %player% a reçu %amount% de money."
+  received_item_log: "Sgive : %player% a reçu %quantity%x%item%."
+  no_perms: "Vous n'avez pas la permission de recharger la configuration."

@@ -3,18 +3,20 @@ plugins {
 }
 
 group = "fr.MrJuJu0319"
-version = "1.0"
+version = "1.3"
 
 repositories {
     mavenCentral()
     mavenLocal()
     maven { url = uri("https://repo.essentialsx.net/releases/") } // EssentialsX API
     maven { url = uri("https://repo.papermc.io/repository/maven-public/") } // Paper API
+    maven { url = uri("https://repo.extendedclip.com/content/repositories/placeholderapi/") }
 }
 
 dependencies {
     compileOnly("io.papermc.paper:paper-api:1.20.1-R0.1-SNAPSHOT") // Paper API
     compileOnly("net.essentialsx:EssentialsX:2.20.1") // EssentialsX API
+    compileOnly("me.clip:placeholderapi:2.10.9") //PAPI API
     // Dépendance Velocity pour les fonctionnalités supplémentaires, si nécessaire
     compileOnly("com.velocitypowered:velocity-api:3.3.0-SNAPSHOT")
     annotationProcessor("com.velocitypowered:velocity-api:3.3.0-SNAPSHOT")

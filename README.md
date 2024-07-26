@@ -33,6 +33,12 @@ SilenceCMD est un plugin Minecraft permettant aux administrateurs de donner des 
 - **Description**: Ajoute de l'argent au solde du joueur spécifié.
 - **Usage**: `/seco <player> <amount>`
 - **Exécution**: Doit être exécutée depuis la console.
+- 
+### `/sreloadconfig`
+
+- **Description**: Recharge la configuration et les messages.
+- **Usage**: `/sreloadconfig`
+- **Exécution**: Doit être exécutée depuis la console.
 
 ## Développement
 
