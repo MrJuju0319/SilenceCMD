@@ -29,13 +29,19 @@ public class SecoCommand implements CommandExecutor {
             return true;
         }
 
-        if (args.length < 2) {
+        if (args.length == 0 || !args[0].equalsIgnoreCase("give")) {
             sender.sendMessage(plugin.getMessage("usage_seco"));
             return true;
         }
 
+        // Vérifier si la sous-commande give est correctement suivie par les arguments nécessaires
+        if (args.length < 3) {
+            sender.sendMessage(plugin.getMessage("usage_seco_give"));
+            return true;
+        }
+
         // Utiliser PlaceholderAPI pour résoudre le nom du joueur si nécessaire
-        String playerName = PlaceholderAPI.setPlaceholders(null, args[0]);
+        String playerName = PlaceholderAPI.setPlaceholders(null, args[1]);
         User user = essentials.getUser(playerName);
 
         if (user == null) {
@@ -44,7 +50,7 @@ public class SecoCommand implements CommandExecutor {
         }
 
         try {
-            BigDecimal amount = new BigDecimal(args[1]);
+            BigDecimal amount = new BigDecimal(args[2]);
             if (amount.compareTo(BigDecimal.ZERO) <= 0) {
                 sender.sendMessage(plugin.getMessage("positive_amount"));
                 return true;
@@ -52,12 +58,12 @@ public class SecoCommand implements CommandExecutor {
 
             BigDecimal currentBalance = user.getMoney();
             user.setMoney(currentBalance.add(amount));
+
             if (plugin.isDebugMode()) {
                 String logMessage = plugin.getMessage("received_money_log")
                         .replace("%player%", playerName)
                         .replace("%amount%", amount.toString());
                 plugin.getLogger().info(logMessage);
-
             }
         } catch (NumberFormatException e) {
             sender.sendMessage(plugin.getMessage("invalid_amount"));

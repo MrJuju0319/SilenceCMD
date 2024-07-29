@@ -31,7 +31,7 @@ SilenceCMD est un plugin Minecraft permettant aux administrateurs de donner des 
 ### `/seco`
 
 - **Description**: Ajoute de l'argent au solde du joueur spécifié.
-- **Usage**: `/seco <player> <amount>`
+- **Usage**: `/seco give <player> <amount>`
 - **Exécution**: Doit être exécutée depuis la console.
 - 
 ### `/sreloadconfig`
@@ -52,7 +52,7 @@ SilenceCMD est un plugin Minecraft permettant aux administrateurs de donner des 
 1. Clonez ce dépôt : `git clone <URL_DU_DEPOT>`
 2. Naviguez dans le répertoire du projet : `cd SilenceCMD`
 3. Compilez le projet avec Gradle : `./gradlew build`
-4. Le fichier JAR généré se trouvera dans le répertoire `build/libs`.
+4. Le fichier JAR généré se trouvera dans le répertoire `./server/plugins`.
 
 ## Contributions
 
